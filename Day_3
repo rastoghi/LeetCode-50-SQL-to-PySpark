@@ -1,12 +1,12 @@
 
 
---1- write a sql to get all the orders where customers name has "a" as second character and "d" as fourth character (58 rows)
+Q1.- write a sql to get all the orders where customers name has "a" as second character and "d" as fourth character (58 rows)
 
 select customer_name
 from orders
 where customer_name like '_a_d%'
 
---2- write a sql to get all the orders placed in the month of dec 2020 (352 rows) 
+Q2.- write a sql to get all the orders placed in the month of dec 2020 (352 rows) 
 select *
 from orders
 where order_date between '2020-12-01' and '2020-12-31'
