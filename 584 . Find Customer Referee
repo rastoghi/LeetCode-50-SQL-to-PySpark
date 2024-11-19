@@ -50,6 +50,7 @@ Output:
 Solution:- 
 
 **SQL**
+========
 
 select name
 from Customer
@@ -57,6 +58,7 @@ where referee_id != 2 or referee_id is null
 
 
 **PySpark**
+============
 
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
