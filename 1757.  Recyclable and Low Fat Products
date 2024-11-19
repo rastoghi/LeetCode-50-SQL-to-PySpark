@@ -1,4 +1,5 @@
 **SQL**
+Source Link:- https://leetcode.com/problems/recyclable-and-low-fat-products/description/?envType=study-plan-v2&envId=top-sql-50
 
 
 
@@ -76,11 +77,11 @@ Products=[(0,'Yes','No'),
 Products_schema=["Products_id","low_fats","recyclable"]
 Products_df=spark.createDataFrame(data=Products,schema=Products_schema)
 
-Products_df.show()
+Products_df.display()
 
 
 Products_df.filter((col("low_fats")=="Yes") & (col("recyclable")=="Yes"))\
-           .select(col("Products_id")).show()
+           .select(col("Products_id")).display()
 
 
 
