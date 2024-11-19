@@ -74,4 +74,7 @@ customer = [(1,'Will',None),
 customer_schema=["id","name","referee_id"]
 
 customer_df = spark.createDataFrame(data=customer,schema=customer_schema)
-customer_df.show()
+customer_df.display()
+
+customer_df.filter((col("referee_id")!=2) | (col("referee_id").isNull()))\
+           .select("name").display()
